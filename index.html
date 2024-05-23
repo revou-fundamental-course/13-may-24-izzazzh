@@ -1,10 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-    </head>
-    <body>
-        
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghitungan Segitiga</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Kalkulator Matematik Segitiga</h1>
+        <div id="creator">
+            <p id="creator">Dibuat oleh: <b>Izza Azizah</b></p>
+        </div>
+        <div id="content">
+            <div id="form-container">
+                <div id="luas-form">
+                    <div class="rumus">
+                        <h2>Rumus Luas Segitiga</h2>
+                        <p class="center">L = 1/2 x a x t</p>
+                        <p><b>L</b> = Luas Segitiga</p>
+                        <p><b>a</b> = Alas Segitiga</p>
+                        <p><b>t</b> = Tinggi Segitiga</p>
+                    </div>
+                    <label for="base">Alas (base):</label>
+                    <input type="number" id="base" required>
+                    <label for="height">Tinggi (height):</label>
+                    <input type="number" id="height" required>
+                    <button onclick="calculateLuas()">Hitung Luas</button>
+                    <p id="result"></p>
+                </div>
+                <div id="keliling-form" style="display: none;">
+                    <div class="rumus">
+                        <h2>Rumus Keliling Segitiga</h2>
+                        <p class="center">K = a + b + c</p>
+                        <p><b>K</b> = Keliling Segitiga</p>
+                        <p><b>a</b> = Sisi a</p>
+                        <p><b>b</b> = Sisi b</p>
+                        <p><b>c</b> = Sisi c</p>
+                    </div>
+                    <label for="side1">Sisi 1:</label>
+                    <input type="number" id="side1" required>
+                    <label for="side2">Sisi 2:</label>
+                    <input type="number" id="side2" required>
+                    <label for="side3">Sisi 3:</label>
+                    <input type="number" id="side3" required>
+                    <button onclick="calculateKeliling()">Hitung Keliling</button>
+                    <p id="result-keliling"></p>
+                </div>
+                <button id="toggle-button" onclick="toggleForm()">Ganti ke Keliling Segitiga</button>
+                <button id="reset-button" onclick="resetForm()">Reset</button>
+            </div>
+            <div id="image-container">
+                <img id="triangle-image" src="assets/segitiga.png" alt="Gambar Segitiga">
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
 </html>
